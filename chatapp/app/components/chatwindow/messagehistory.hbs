@@ -1,0 +1,7 @@
+<div class="history-message-container" id = "chathistory">
+  <div class="history-message-inner-container">
+    {{#each @history as |message|}}
+        <Chatwindow::Messagebubble @message={{markmessagedirection message}}/>
+    {{/each}}
+  </div>
+</div>

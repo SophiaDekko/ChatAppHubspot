@@ -1,0 +1,399 @@
+/****************************** decoration style **********************************/
+.center {
+  display: flex;
+  justify-content:center;
+}
+
+.bold {
+  font-size: inherit;
+  font-weight: bold;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.big {
+  padding: 15px 30px;
+}
+
+.small {
+  padding: 5px 15px;
+}
+
+.top-margin {
+  margin-top: 35px;
+}
+
+.left {
+  margin-left: auto; 
+  margin-right: 0px;
+}
+
+.bottom {
+  margin-top: auto; 
+  margin-bottom: 5px;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+/****************************** Responsiveness **********************************/
+
+@media (max-width: 800px) {
+  .chat-container {
+    height:100%;
+    width:600px;
+  }
+
+  .chat-container-inner {
+    flex-wrap: wrap;
+    height:100%;
+    width:100%;
+  }
+
+  .contacts-nav {
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    max-height: 10%;
+    overflow-x: auto;
+  }
+
+  .chat-container-inside {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .history-message-container {
+    width:100%;
+    flex:7;
+    border:1px solid white;
+    overflow-y: auto;
+  }
+
+  .message-bubble {
+    border-radius: 15px 5px;
+    margin-bottom: 10px;
+    padding: 8px 10px;
+    max-width: 350px;
+    width: fit-content;
+    height: fit-content;
+  }
+
+}
+
+/********************************** Pages  **************************************/
+.app-wapper {
+  height: 100vh;
+  width:100vw;
+}
+.app-wapper >* {
+  padding: 0% 10%;
+}
+.signin-page {
+  position: relative;
+  top: 40vh;
+  transform: translateY(-50%);
+}
+
+/***********************************  DropDown ***************************************/
+.link {
+  text-decoration: none;
+}
+/* Dropdown Button */
+.dropinput {
+    outline: none;
+    border:none;
+    background-color: rgb(244,246,248);
+    margin-top: 25px;
+    padding-left:50px;
+    width: 100px;
+    border-bottom: 1px solid black;
+  }
+
+  .dropinput:hover {
+    border-bottom: 2px solid black;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content p {
+    color: black;
+    padding: 12px 16px;
+    width:auto;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content p:hover {background-color: #ddd;}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+  
+  /* Sigin button */
+  button {
+    display: block;
+    background-color: #4CAF50;
+    color: white;
+    font-size: inherit;
+    border: none;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #3e8e41;
+  }
+
+
+  /*********************************************chat Window**********************************/
+  .header-container{
+    width:100%;
+    height:40px;
+    background-color: #a2a2a2;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .header-subcontainer{
+    margin-left: auto; 
+    margin-right: 10px;
+    min-width: 50px;
+    height:30px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    font-weight: bold;
+  }
+
+  .header-subcontainer > *{
+    margin-right: 10px;
+  }
+
+  .arrow-down {
+    width: 0; 
+    height: 0; 
+    position: relative;
+    top:60%;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 7px solid black;
+  }
+
+ 
+  /* Status Dot */
+  .contacts-nav {
+    background-color: #e6e6e6;
+    border: 1px solid white;
+    height: 100%;
+    flex:1;
+    min-width: 200px;
+    overflow-y: auto;
+  }
+
+  .contacts-item {
+    width:auto;
+    height:30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+  }
+
+  .onfocus {
+    background-color: #a2a2a2;
+    font-weight: bold;
+  }
+
+  .contacts-status {
+    box-shadow: 2px 2px 4px grey;
+    border-radius: 50%;
+    width: 13px;
+    height: 13px;
+    display: inline-block;
+  }
+
+  .active {
+    background: #3e8e41;
+    border:1px solid #58965a;
+  }
+
+  .offline {
+    background: #d5d8d8;
+    box-shadow: 2px 2px 4px grey;
+    border:1px solid #c4c7c7;
+  }
+
+  .busy {
+    background: #e48732;
+    box-shadow: 2px 2px 4px grey;
+    border:1px solid #ce792b;
+  }
+
+  .popup {
+    width:fit-content;
+    max-width: 150px;
+    min-width: 60px;
+    height:50px;
+    background: #f3ac69;
+    position: absolute;
+    border-radius: .4em;
+  }
+
+  .popup-header {
+    display: flex;
+    justify-content: space-between;
+    height:20px;
+    font-size:0.5rem;
+  }
+
+  .popup-header > span {
+    position: relative;
+    margin-left: 3px;
+    margin-right: auto;
+  }
+
+  .popup-message {
+    width:fit-content;
+    max-width: 150px;
+    min-width: 60px;
+    margin:0px 5px 5px 5px;
+    font-size:1rem;
+    cursor: pointer;
+  }
+  
+  .popup:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-top-color: #f3ac69;
+    border-bottom: 0;
+    margin-left: -10px;
+    margin-bottom: -10px;
+  }
+
+  .pin {
+    position: relative;
+    top:0px;
+    left:0px;
+    width:15px;
+    height:15px;
+    background-color: black;
+  }
+  
+  /*********************************chat history **********************************/
+  .chat-container {
+    height:600px;
+    width:800px;
+  }
+
+  .chat-container-inner {
+    height:100%;
+    width:100%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .chat-container-inside {
+    flex:3;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .history-message-container {
+    width:100%;
+    flex:7;
+    border:1px solid white;
+    overflow-y: auto;
+  }
+
+  .history-message-inner-container {
+    margin:10px;
+  }
+
+  .message-bubble {
+    border-radius: 15px 5px;
+    margin-bottom: 10px;
+    padding: 8px 10px;
+    max-width: 450px;
+    width: fit-content;
+    height: fit-content;
+  }
+  
+  .send {
+    background-color: #4caf50;
+    color:white;
+    margin-right: 0px;
+    margin-left: auto;
+  }
+
+  .receive {
+    background-color: #a2a2a2;
+    color:black;
+    margin-right: auto;
+    margin-left: 0px;
+  }
+
+  /**********************************reply box****************************************/
+
+  .reply-container {
+    width:600px;
+    flex:3;
+    border:2px solid #e6e4e4;
+  }
+  .reply-inner-container {
+    margin:10px;
+    height: 60%;
+    width: auto;
+  }
+  .reply-input {
+    resize: none;
+    font-size: inherit;
+    margin-bottom: 10px;
+    width:100%;
+    height:95%;
+    background-color: #f4f6f8;
+    border:none;
+  }
+  .reply-input:focus{
+    outline: 0;
+  }
+
+  /*********************************scroll bar ***********************************/
+
+  *::-webkit-scrollbar {
+    height: 5px; 
+    width: 5px;
+  }
+
+  * ::-webkit-scrollbar-track {
+    background-color: #d5d8d8;
+  }
+
+
+  *::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 7px rgba(0, 0, 0, 0.3);
+  }
